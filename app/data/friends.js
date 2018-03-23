@@ -4,7 +4,7 @@
 // Initially we just set it equal to a "dummy" friend/info.
 // ===============================================================================
 
-var friendsArray = [
+var partnerArray = [
     {
         "name" : "Shark Boy",
         "photo" : "http://img3.rnkr-static.com/user_node_img/101/2013941/870/shark-boy-photo-u2.jpg",
@@ -80,4 +80,4 @@ var friendsArray = [
 
 
 // Export the array to make it accessible to other files using require.
-module.exports = friendsArray;
+module.exports = partnerArray;

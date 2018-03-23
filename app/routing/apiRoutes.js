@@ -20,6 +20,27 @@ module.exports = function(app) {
         friendData.push(req.body);
         res.end();
     });
+
+    // POST info gathered from our survey to the express server? i don't know what page this info should be on, if it even works, and then where to POST it too.
+    app.post("/api/friends", function(req, res) {
+        var newPersonScore = req.body.score;
+        var lowScore = 100;
+        var newTagPartner
+
+        for (var i = 0; i < partnerArray.length; i++) {
+            var newLowScore = 0
+
+            for (var j = 0; j < partnerArray[i].scores.length; j++) {
+                newLowScore += Math.abs(newPersonScore[j] - partnerArray[i].score[j]);
+            }
+            if (newLowScore < lowScore) {
+                lowScore = newLowScore;
+                newTagPartner = partnerArray[i];
+            }
+        }
+        partnerArray.push(req.body)
+        res.send(newTagPartner);
+    });
 };
 
 

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Friend Finder Survey</title>
-
+    <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -18,8 +19,6 @@
             <br>
 
             <div class = "text-center">
-                <!-- <a href = "/survey"><button type = "button" class = "btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> Take Survey</button></a> -->
-
                 <a href="/"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-home"></span> Home</button></a>
             </div>
         </div>
@@ -27,24 +26,41 @@
     
     <div class = "container">
         <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h3 class="panel-title">"Now, making their way to the ring is: "</h3>
+            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="inputName">Enter your Professional Wrestler Name</label>
+                    <input type="text" class="form-control" id="wrestlerName" placeholder="wrestler name">
+                </div>
+                <div class="form-group">
+                    <label for="inputPic">Photo Url (optional)</label>
+                    <input type="text" class="form-control" id="photoUrl" placeholder="http://img3.rnkr-static.com/user_node_img/101/2013941/870/shark-boy-photo-u2.jpg">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Question 1</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques1">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions1" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions1" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions1" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions1" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions1" value="5"> 5
                 </label>
             </div>
         </div>
@@ -53,21 +69,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 2</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques2">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions2" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions2" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions2" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions2" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions2" value="5"> 5
                 </label>
             </div>
         </div>
@@ -76,21 +92,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 3</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques3">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions3" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions3" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions3" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions3" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions3" value="5"> 5
                 </label>
             </div>
         </div>
@@ -99,21 +115,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 4</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques4">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions4" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions4" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions4" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions4" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions4" value="5"> 5
                 </label>
             </div>
         </div>
@@ -122,21 +138,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 5</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques5">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions5" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions5" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions5" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions5" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions5" value="5"> 5
                 </label>
             </div>
         </div>
@@ -145,21 +161,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 6</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques6">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions6" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions6" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions6" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions6" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions6" value="5"> 5
                 </label>
             </div>
         </div>
@@ -168,21 +184,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 7</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques7">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions7" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions7" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions7" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions7" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions7" value="5"> 5
                 </label>
             </div>
         </div>
@@ -191,21 +207,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 8</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques8">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions8" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions8" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions8" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions8" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions8" value="5"> 5
                 </label>
             </div>
         </div>
@@ -214,21 +230,21 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 9</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques9">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions9" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions9" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions9" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions9" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions9" value="5"> 5
                 </label>
             </div>
         </div>
@@ -237,33 +253,144 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Question 10</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="ques10">
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    <input type="radio" name="inlineRadioOptions10" value="1"> 1
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    <input type="radio" name="inlineRadioOptions10" value="2"> 2
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    <input type="radio" name="inlineRadioOptions10" value="3"> 3
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+                    <input type="radio" name="inlineRadioOptions10" value="4"> 4
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                    <input type="radio" name="inlineRadioOptions10" value="5"> 5
                 </label>
             </div>
         </div>
 
+        <div class = "text-center">
+            <button type="button" class="btn btn-lg btn-danger" id = "submit"><span class="glyphicon glyphicon-home"></span> Tag Me In!</button></a>
+        </div>
+
     </div>
 
-        <footer class="footer">
-            <div class="container">
-                <p><a href = "/api/friends" target = "blank">API Table Link</a> | <a href = "#" target = "blank">GitHub Repo</a></p>
-            </div>
-        </footer>
-    </div>
+    <footer class="footer">
+        <div class="container">
+            <p><a href = "/api/friends" target = "blank">API Table Link</a> | <a href = "#" target = "blank">GitHub Repo</a></p>
+        </div>
+    </footer>
 
 </body>
+
+<script type="text/javascript">
+    // capture radio button values for ea answer and push them to our newPersonArray
+    var newPersonArray = [];
+
+    $("[name=inlineRadioOptions1]").on("click", function(event) {
+        var q1 = $('input:radio[name="inlineRadioOptions1"]:checked').val();
+        console.log("q1: " + q1);
+        newPersonArray.push(q1);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions2]").on("click", function(event) {
+        var q2 = $('input:radio[name="inlineRadioOptions2"]:checked').val();
+        console.log("q2: " + q2);
+        newPersonArray.push(q2);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+        $("[name=inlineRadioOptions3]").on("click", function(event) {
+        var q3 = $('input:radio[name="inlineRadioOptions3"]:checked').val();
+        console.log("q3: " + q3);
+        newPersonArray.push(q3);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions4]").on("click", function(event) {
+        var q4 = $('input:radio[name="inlineRadioOptions4"]:checked').val();
+        console.log("q4: " + q4);
+        newPersonArray.push(q4);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions5]").on("click", function(event) {
+        var q5 = $('input:radio[name="inlineRadioOptions5"]:checked').val();
+        console.log("q5: " + q5);
+        newPersonArray.push(q5);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+        $("[name=inlineRadioOptions6]").on("click", function(event) {
+        var q6 = $('input:radio[name="inlineRadioOptions6"]:checked').val();
+        console.log("q6: " + q6);
+        newPersonArray.push(q6);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions7]").on("click", function(event) {
+        var q7 = $('input:radio[name="inlineRadioOptions7"]:checked').val();
+        console.log("q7: " + q7);
+        newPersonArray.push(q7);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+        $("[name=inlineRadioOptions8]").on("click", function(event) {
+        var q8 = $('input:radio[name="inlineRadioOptions8"]:checked').val();
+        console.log("q8: " + q8);
+        newPersonArray.push(q8);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions9]").on("click", function(event) {
+        var q9 = $('input:radio[name="inlineRadioOptions9"]:checked').val();
+        console.log("q9: " + q9);
+        newPersonArray.push(q9);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("[name=inlineRadioOptions10]").on("click", function(event) {
+        var q10 = $('input:radio[name="inlineRadioOptions10"]:checked').val();
+        console.log("q10: " + q10);
+        newPersonArray.push(q10);
+        console.log("newPersonArray: " + newPersonArray);
+    });
+
+    $("#submit").on("click", function(event) {
+        console.log(newPersonArray);
+        var sum = newPersonArray.reduce(add, 0);
+        function add(a, b) {
+            return a+b;
+        }
+        console.log("newPersonArray sum: " + sum);
+    });
+
+    // Multiple different attempts to consolidate and simplify the above code into to where I could somehow insert a variable (counter or something) everywhere there is a number that would represent question #, answer # radio button answer, etc. 
+
+    // var counter = 0;
+
+    // $("[name=inlineRadioOptions]").on("click", function (event) {
+    //     counter++;
+    //     console.log(counter);
+    // })
+    // $("[type=radio]").on("click", function(event) {
+    // if($("input[type='radio'.radio-inline").is('checked')) {
+    // var answerValue = $(".radio-inline").val();
+    // console.log("clicked " + answerValue);
+        // }
+
+        // var answerValue = $("[name = inlineRadioOptions10]").val();
+        
+        
+        // "[type = radio]"
+    // });
+
+
+</script>
+
+
 </html>
