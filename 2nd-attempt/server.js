@@ -18,10 +18,11 @@ var app = express();
 // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
 
-
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: "application'/**json" }));
+app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
+app.use(bodyParser.text({ type: "text/html" }));
 
 // We are requiring ("linking") the following route pages...we incl our api-route first, b/c that is where we are pulling our data to display inside out html pages
 require("./app/routing/apiRoutes.js")(app);

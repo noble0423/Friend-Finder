@@ -6,10 +6,10 @@
 
 var partnerArray = [
     {
-        "name" : "Shark Boy",
-        "photo" : "http://img3.rnkr-static.com/user_node_img/101/2013941/870/shark-boy-photo-u2.jpg",
+        "name" : "Tom Spiderman",
+        "photo" : "http://pic.hqshuaimi.com/uploadimg/2013/0923/20130923011606300.jpg",
         "scores" : [
-            5, 1, 4, 4, 5, 1, 2, 5, 4, 1
+            3, 1, 2, 4, 1, 5, 4, 5, 3, 3
         ]
     },
     {
@@ -20,10 +20,10 @@ var partnerArray = [
         ]
     },
     {
-        "name" : "Tom Spiderman",
-        "photo" : "http://pic.hqshuaimi.com/uploadimg/2013/0923/20130923011606300.jpg",
+        "name" : "Shark Boy",
+        "photo" : "http://img3.rnkr-static.com/user_node_img/101/2013941/870/shark-boy-photo-u2.jpg",
         "scores" : [
-            3, 1, 2, 4, 1, 5, 4, 5, 3, 3
+            5, 1, 4, 4, 5, 1, 2, 5, 4, 1
         ]
     },
     {
@@ -69,7 +69,7 @@ var partnerArray = [
         ]
     },
     {
-        "name" : "Knucleball",
+        "name" : "Knuckleball",
         "photo" : "http://i1.ytimg.com/vi/U4MTEmYFRoU/hqdefault.jpg",
         "scores" : [
             5, 4, 3, 2, 1, 2, 3, 4, 5, 4
